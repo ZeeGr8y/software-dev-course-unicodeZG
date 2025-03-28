@@ -86,20 +86,25 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108);// Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let firstChar = inputString2.charCodeAt(0);
+let lastChar = inputString2.charCodeAt(5);
+
+let swappedString = String.fromCharCode(lastChar)+
+inputString2.slice(1,-1)+
+String.fromCharCode(firstChar); // Your code here
 
 // Log all results
-console.log({
-  firstCodePoint,
-  thirdCodePoint,
-  wordFromCodePoints,
-  swappedString,
-});
+console.log( `Task 1:
+Code pointer for first character: ${firstCodePoint} 
+Code pointer for third character: ${thirdCodePoint}
+Task 2: ${wordFromCodePoints},
+Task 3: ${swappedString}
+`);
